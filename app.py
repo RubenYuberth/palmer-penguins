@@ -487,22 +487,8 @@ with tab3:
 with tab4:
     st.markdown("### Datos filtrados")
 
-    styled_df = (
-        df_filtrado.style
-        .format({
-            "longitud_pico_mm": "{:.1f}",
-            "profundidad_pico_mm": "{:.1f}",
-            "longitud_aleta_mm": "{:.1f}",
-            "masa_corporal_g": "{:.0f}",
-        })
-        .background_gradient(
-            cmap="Blues",
-            subset=["longitud_pico_mm", "profundidad_pico_mm", "longitud_aleta_mm", "masa_corporal_g"],
-        )
-    )
-
     st.dataframe(
-        styled_df,
+        df_filtrado,
         width='stretch',
         hide_index=True,
         column_order=["especie", "isla", "sexo", "longitud_pico_mm", "profundidad_pico_mm", "longitud_aleta_mm", "masa_corporal_g"],

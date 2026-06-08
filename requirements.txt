@@ -1,5 +1,5 @@
+palmerpenguins
 streamlit>=1.35
 pandas>=2.2
 plotly>=5.18
-palmerpenguins
 matplotlib>=3.8

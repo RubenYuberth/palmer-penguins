@@ -3,7 +3,6 @@ from __future__ import annotations
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import palmerpenguins
 
 # ─── Page Configuration ─────────────────────────────────────────────────
 st.set_page_config(
@@ -129,9 +128,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ─── Data Loading ──────────────────────────────────────────────────────
+URL_DATASET = "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv"
+
 @st.cache_data
 def cargar_datos() -> pd.DataFrame:
-    df = palmerpenguins.load_penguins()
+    df = pd.read_csv(URL_DATASET)
     df = df.dropna().rename(columns={
         "species": "especie",
         "island": "isla",

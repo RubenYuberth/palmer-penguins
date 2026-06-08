@@ -293,7 +293,6 @@ with tab1:
                 "sexo": "Sexo",
                 "masa_corporal_g": "Masa corporal (g)",
             },
-            title="Longitud vs Profundidad del Pico",
         )
         fig_scatter.update_traces(
             marker=dict(line=dict(width=0.8, color="white")),
@@ -303,7 +302,6 @@ with tab1:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
             hovermode="closest",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -312,6 +310,7 @@ with tab1:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Longitud vs Profundidad del Pico**")
         st.plotly_chart(fig_scatter, width='stretch', config={"displayModeBar": False})
 
     with col_b:
@@ -329,12 +328,10 @@ with tab1:
                 "isla": "Isla",
                 "count": "Frecuencia",
             },
-            title="Distribución de la Masa Corporal",
         )
         fig_hist.update_layout(
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -343,6 +340,7 @@ with tab1:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Distribución de la Masa Corporal**")
         st.plotly_chart(fig_hist, width='stretch', config={"displayModeBar": False})
 
 ########################################################################
@@ -365,12 +363,10 @@ with tab2:
                 "longitud_pico_mm": "Longitud del pico (mm)",
                 "sexo": "Sexo",
             },
-            title="Longitud del Pico por Especie y Sexo",
         )
         fig_box_len.update_layout(
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -379,6 +375,7 @@ with tab2:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Longitud del Pico por Especie y Sexo**")
         st.plotly_chart(fig_box_len, width='stretch', config={"displayModeBar": False})
 
     with col_b:
@@ -395,12 +392,10 @@ with tab2:
                 "profundidad_pico_mm": "Profundidad del pico (mm)",
                 "sexo": "Sexo",
             },
-            title="Profundidad del Pico por Especie y Sexo",
         )
         fig_box_depth.update_layout(
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -409,6 +404,7 @@ with tab2:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Profundidad del Pico por Especie y Sexo**")
         st.plotly_chart(fig_box_depth, width='stretch', config={"displayModeBar": False})
 
 ########################################################################
@@ -431,12 +427,10 @@ with tab3:
                 "longitud_aleta_mm": "Longitud de la aleta (mm)",
                 "sexo": "Sexo",
             },
-            title="Longitud de la Aleta",
         )
         fig_violin.update_layout(
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -445,6 +439,7 @@ with tab3:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Longitud de la Aleta**")
         st.plotly_chart(fig_violin, width='stretch', config={"displayModeBar": False})
 
     with col_b:
@@ -465,7 +460,6 @@ with tab3:
                 "sexo": "Sexo",
                 "longitud_pico_mm": "Longitud del pico (mm)",
             },
-            title="Masa Corporal vs Longitud de Aleta",
         )
         fig_mass.update_traces(
             marker=dict(line=dict(width=0.8, color="white")),
@@ -475,7 +469,6 @@ with tab3:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
             hovermode="closest",
-            title=dict(x=0.5, xanchor="center", font=dict(size=16)),
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 xanchor="right", x=1, font=dict(size=11),
@@ -484,6 +477,7 @@ with tab3:
             xaxis=dict(gridcolor="#E2E8F0", zeroline=False),
             yaxis=dict(gridcolor="#E2E8F0", zeroline=False),
         )
+        st.markdown("**Masa Corporal vs Longitud de Aleta**")
         st.plotly_chart(fig_mass, width='stretch', config={"displayModeBar": False})
 
 ########################################################################
